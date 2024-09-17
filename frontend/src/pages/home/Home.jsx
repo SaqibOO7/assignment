@@ -14,7 +14,7 @@ function Home() {
       const lowercasedQuery = query?.toLowerCase();
       const results = clients.filter(client =>
         client.clientName?.toLowerCase().includes(lowercasedQuery) ||
-        client.clientId?.toLowerCase().includes(lowercasedQuery)
+        client._id?.toLowerCase().includes(lowercasedQuery)
       );
       setFilteredClients(results);
     } else {

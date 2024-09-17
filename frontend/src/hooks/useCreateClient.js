@@ -18,6 +18,7 @@ const useCreateClient = () => {
                 throw new Error(data.error)
             }
             setUserData(data);
+            toast.success("Job created successfully")
 
         } catch (error) {
             toast.error(error.message);

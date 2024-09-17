@@ -73,9 +73,8 @@ function Edit() {
     if (formData.inventoryImage instanceof File) {
       formDataToSend.append('inventoryImage', formData.inventoryImage);
     }
-    await updateJob(clientId, formDataToSend);
+    await updateJob(id, formDataToSend);
 
-    console.log(formData);
     // Submit form logic here
   };
 

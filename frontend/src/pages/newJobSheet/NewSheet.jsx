@@ -47,9 +47,7 @@ function NewSheet() {
 
     if (!loading && userData) {
       toast.success("Job Sheet Created Successfully!");
-      // Redirect or clear form here depending on your flow
     }
-    console.log(formData);
     // Submit form logic here
   };
 

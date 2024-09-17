@@ -5,10 +5,10 @@ const useUpdateClient = () => {
   const [loading, setLoading] = useState(false)
   const [userData, setUserData] = useState();
 
-  const updateJob = async(clientId, formData) => {
+  const updateJob = async(id, formData) => {
     setLoading(true)
     try {
-        const res = await fetch(`/api/v1/user/update/${clientId}`, {
+        const res = await fetch(`/api/v1/user/update/${id}`, {
             method: "PATCH",
             body: formData,
             headers: {

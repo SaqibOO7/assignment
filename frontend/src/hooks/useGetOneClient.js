@@ -5,10 +5,10 @@ const useGetOneClient = () => {
   const [loading, setLoading] = useState(false);
   const [userData, setUserData] = useState();
 
-  const getClient = useCallback(async(clientId) => {
+  const getClient = useCallback(async(id) => {
     setLoading(true)
     try {
-        const res = await fetch(`/api/v1/user/getjob/${clientId}`)
+        const res = await fetch(`/api/v1/user/getjob/${id}`)
         const data = await res.json();
         if(data.error){
             throw new Error(data.error)

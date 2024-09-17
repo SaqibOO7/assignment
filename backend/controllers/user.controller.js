@@ -27,9 +27,7 @@ export const createJob = async (req, res) => {
         // }
 
         //Handling Image/Doc/video
-        console.log("ok")
         const filesLocalPath = req.files?.inventoryImage[0]?.path;
-        console.log("ok2")
 
         if (!filesLocalPath) {
             return res.status(401).json({ error: "Client files are required" })

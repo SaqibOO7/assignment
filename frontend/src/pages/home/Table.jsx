@@ -5,11 +5,6 @@ import useDeleteClient from '../../hooks/useDeleteClient';
 function Table({ clients, onDelete }) {
     const {deleteJob, Dloading} = useDeleteClient()
 
-    const handleEditClick = (id) => {
-        // Logic for setting the client ID for editing
-        console.log(`Edit client with ID: ${id}`);
-    };
-
     const handleDeleteClick = async (id) => {
         if (window.confirm("Are you sure you want to delete this client?")) {
             try {
@@ -76,7 +71,6 @@ function Table({ clients, onDelete }) {
                                     <Link to={`/edit/${client._id}`}>
                                         <button
                                             className="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-1 px-1 rounded"
-                                            onClick={() => handleEditClick(client._id)}
                                         >Edit</button>
                                     </Link>
                                     <button
