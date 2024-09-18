@@ -14,7 +14,7 @@ router.route('/save').post(
     createJob
 )
 
-router.route('/update/:clientId').patch(updateJob)
+router.route('/update/:clientId').patch(upload.single("inventoryImage"), updateJob)
 router.route('/delete/:clientId').delete(deleteJob)
 router.route('/getjob/:clientId').get(getOneJob)
 router.route('/').get(getAllClients)
